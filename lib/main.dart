@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_app/Home_Page.dart';
 
 void main() {
   runApp(
@@ -6,20 +7,15 @@ void main() {
   );
 }
 
+// ignore: must_be_immutable
 class Myapp extends StatelessWidget {
   const Myapp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Material(
-          child: Center(
-            // ignore: avoid_unnecessary_containers
-            child: Container(
-              child: const Text("This is my app"),
-            ),
-          ),
-        ));
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false, 
+      home: HomePage(),
+    );
   }
 }
