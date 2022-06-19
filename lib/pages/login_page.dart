@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:practice_app/utils/routes.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -8,16 +9,6 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.cyan,
-        title: Center(
-          child: Text(
-            'Welcome to Login',
-            style: TextStyle(
-                fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
-          ),
-        ),
-      ),
       body: Material(
         color: Colors.white,
         child: Column(
@@ -27,7 +18,17 @@ class LoginPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             SizedBox(
-              height: 20,
+              height: 10,
+            ),
+            Text(
+              "Welcome",
+              style: TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 0,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
@@ -47,14 +48,16 @@ class LoginPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 40,
                   ),
                   ElevatedButton(
                     child: Text("Login"),
                     style: ElevatedButton.styleFrom(
-                        onPrimary: Colors.white, primary: Colors.cyan),
+                        minimumSize: Size(110, 40),
+                        onPrimary: Colors.white,
+                        primary: Colors.cyan),
                     onPressed: () {
-                      print("Hello User");
+                      Navigator.pushNamed(context, MyRoutes.homeroute);
                     },
                   ),
                 ],
