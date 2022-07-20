@@ -11,6 +11,7 @@ class HomePage extends StatelessWidget {
     String name = "Patel";
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
         title: Text('Medicine Reminder'),
       ),
         body: Center(
@@ -19,6 +20,7 @@ class HomePage extends StatelessWidget {
             child: Text("This is my app $days $name "),
           ),
         ),
+        drawer: Drawer(),
       );
   }
 }
